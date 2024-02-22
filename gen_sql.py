@@ -282,7 +282,7 @@ class Text2SQL:
 
         if input_dict.get("table_info", "") == "":
             self.logger.info(f"cur_idx:{cur_idx}, origin_idx:{origin_idx} error, stop at step 3, query is {query}")
-            input_dict["table_info"] == input_dict["init_table_info"]
+            input_dict["table_info"] == input_dict["init_table_infos"]
 
         if mode == "debug":
             print("--------------step2-2：The simplified and reorganized tables and fields are--------------")
