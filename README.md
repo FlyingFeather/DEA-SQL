@@ -1,5 +1,7 @@
 # Decomposition for Enhancing Attention: Improving LLM-based Text-to-SQL through Workflow Paradigm
 
+##### 🔥🔥 2024.05. DEA-SQL is accepted by Findings of ACL 2024!
+
 Based on the idea that **D**ecomposition for **E**nhancing **A**ttention, we propose the workflow paradigm method named DEA-SQL with five major steps as shown in Figure. Check out our [paper](https://arxiv.org/abs/2402.10671) for more information.
 
 
@@ -22,15 +24,15 @@ transformers==4.32.0
 torch==1.12.1
 ```
 ## Environment
-1. pip install requirements
-2. python nltk_downloader.py
+1. `pip install requirements`
+2. `python nltk_downloader.py`
 
 
 ## Data Preparation
-Download the data set from the [spider official website](https://yale-lily.github.io/spider), unzip it and put it into the data folder. An example of the file directory is data/spider/database.
+Download the data set from the [spider official website](https://yale-lily.github.io/spider), unzip it and put it into the data folder. An example of the file directory is `data/spider/database`.
 
 ## Usage
-Please modify the OpenAI configuration in common/static_config.py and configure the relevant environment variables for the Azure OpenAI API.
+Please modify the OpenAI configuration in `common/static_config.py` and configure the relevant environment variables for the Azure OpenAI API.
 
 Several important parameters:
 - **dataset**: The name of dataset.
@@ -48,7 +50,7 @@ python main.py --save_file_name "dea-sql.txt" --dataset "spider" --mode "dev" --
 ```
 
 ### evaluation on the Spider Dev datasets
-For the first evaluation, please perform: """python nltk_downloader.py"""
+For the first evaluation, please perform: `python nltk_downloader.py`
 
 ```
 python evaluation/test-suite-sql-eval/evaluation.py --gold "evaluation/gold_files/spider_dev_gold.sql" --pred "outputs/spider/dea-sql.txt" --db ./data/spider/database --print_file_name "outputs/spider/spider-dea-sql.txt" --table './data/spider/tables.json' --etype exec
