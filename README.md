@@ -1,35 +1,75 @@
 # Decomposition for Enhancing Attention: Improving LLM-based Text-to-SQL through Workflow Paradigm
 
-##### 🔥🔥 2024.05. DEA-SQL is accepted by Findings of ACL 2024!
+### 🔥🔥 2024.05. DEA-SQL is accepted by Findings of ACL 2024!
 
 Based on the idea that **D**ecomposition for **E**nhancing **A**ttention, we propose the workflow paradigm method named DEA-SQL with five major steps as shown in Figure. Check out our [paper](https://arxiv.org/abs/2402.10671) for more information.
 
 
 ![model](./docs/model.png)
 
-
-## Requirements
-```
-nltk==3.8.1
-sqlparse==0.4.2
-openai==0.28.0
-langchain==0.0.281
-backoff==2.2.1
-termcolor==2.3.0
-pandas==2.0.3
-scikit-learn==1.3.0
-timeout_decorator==0.5.0
-sql_metadata==2.9.0
-transformers==4.32.0
-torch==1.12.1
-```
-## Environment
-1. `pip install requirements`
-2. `python nltk_downloader.py`
-
-
 ## Data Preparation
 Download the data set from the [spider official website](https://yale-lily.github.io/spider), unzip it and put it into the data folder. An example of the file directory is `data/spider/database`.
+
+## Set Up
+
+### Environment
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/FlyingFeather/DEA-SQL.git
+cd DEA-SQL && mkdir data
+
+# 2. Make a conda environment
+conda create -n deasql python=3.9
+conda activate deasql
+
+# 3. Install requirements
+pip install -r requirements.txt
+python nltk_downloader.py
+```
+
+
+### Dataset
+
+Download the data set from the [spider official website](https://yale-lily.github.io/spider) under `DEA-SQL` , unzip it and put it into the `data` folder. 
+
+```
+mkdir data
+unzip spider.zip -d data
+```
+
+The directory structure should be as follows:
+
+```
+.
+├── argsparser.py
+├── common
+├── correct_sql.py
+├── data
+│   └── spider
+│		├── ...
+│		└── database
+├── data_preprocess.py
+├── docs
+├── evaluation
+├── fewshot
+├── filter_characters.py
+├── gen_sql.py
+├── get_ner.py
+├── hardness_eval.py
+├── __init__.py
+├── LICENSE
+├── llm
+├── logger.py
+├── main.py
+├── nltk_downloader.py
+├── outputs
+├── prompt
+├── README.md
+├── requirements.txt
+└── single_eval.py
+```
+
 
 ## Usage
 Please modify the OpenAI configuration in `common/static_config.py` and configure the relevant environment variables for the Azure OpenAI API.
