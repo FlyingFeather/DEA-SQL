@@ -7,9 +7,6 @@ Based on the idea that **D**ecomposition for **E**nhancing **A**ttention, we pro
 
 ![model](./docs/model.png)
 
-## Data Preparation
-Download the data set from the [spider official website](https://yale-lily.github.io/spider), unzip it and put it into the data folder. An example of the file directory is `data/spider/database`.
-
 ## Set Up
 
 ### Environment
