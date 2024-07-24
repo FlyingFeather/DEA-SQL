@@ -29,6 +29,7 @@ python nltk_downloader.py
 ### Dataset
 
 Download the data set from the [spider official website](https://yale-lily.github.io/spider) under `DEA-SQL` , unzip it and put it into the `data` folder. 
+We provide the data in [drive](https://drive.google.com/file/d/1UTQxnxk8AMhIrFYrNzH5QXtMXdlb0e7T/view?usp=sharing) if it is unable to download dataset from spider official website.
 
 ```
 mkdir data
