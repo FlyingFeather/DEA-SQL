@@ -1,3 +1,5 @@
+
+
 # Decomposition for Enhancing Attention: Improving LLM-based Text-to-SQL through Workflow Paradigm
 
 ### 🔥🔥 2024.05. DEA-SQL is accepted by Findings of ACL 2024!
@@ -45,7 +47,7 @@ The directory structure should be as follows:
 ├── common
 ├── correct_sql.py
 ├── data
-│   └── spider
+│   └── spider
 │		├── ...
 │		└── database
 ├── data_preprocess.py
@@ -71,7 +73,7 @@ The directory structure should be as follows:
 
 
 ## Usage
-Please modify the OpenAI configuration in `common/static_config.py` and configure the relevant environment variables for the Azure OpenAI API.
+Please modify the OpenAI configuration in `common/config/static_config.py` and configure the relevant environment variables for the Azure OpenAI API.
 
 Several important parameters:
 - **dataset**: The name of dataset.
